@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Selected Film</title>
+    <script src="https://kit.fontawesome.com/697c2c5344.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/poster.css">
+</head>
+<body>
+    <div class="container">
+            <div class="movie-card">
+                <div class="movie-poster-container">
+                    <img class="movie-poster" src="<%= poster%>" alt="">
+                </div>
+                <div class="movie-info-container">
+                    <h1 class="movie-info-tile"><%= dataToRender.title %></h1>
+                    <p class="movie-genres">
+                        <!-- <span class="movie-rating">PG-13</span> -->
+                        <span class="release-date"><%= releaseYear %> a.</span>
+                        <span class="genres"><%= genres %></span>
+                        <span class="movie-duration"><%= dataToRender.runtime %> minutes.</span>
+                    </p>
+                <div class="movie-info-action">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                        <li><a href="#"><i class="fas fa-bookmark"></i></a></li>
+                        <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                    </ul>
+                </div>
+                    <p class="movie-info-quote"></p>
+                    <h2 class="movie-info-ovarview-title"><%= dataToRender.tagline %></h2>
+                    <p class="movie-info-overview"><%= dataToRender.overview %></p>
+                    
+
+                    <ul class="movie-info-people">
+                        <li>
+                            <p>Popularity</p>
+                            <p class="popularity"><%= dataToRender.popularity %></p>
+                        </li>
+                        <li>
+                            <p>Language</p>
+                            <p class="original_language"><%= dataToRender.original_language %></p>
+                        </li>
+                        <li>
+                            <p>Release Date</p>
+                            <p class="release_date"><%= dataToRender.release_date %></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <footer>
+                <h3><%= message%></h3>
+                    <ul>
+                        <li><a href="#">Twitter <i class="fab fa-twitter"></i></a> </li>
+                        <li><a href="#">Instagram <i class="fab fa-instagram"></i></a> </li>
+                        <li><a href="#">Facebook <i class="fab fa-facebook"></i></a> </li>
+                    </ul>
+                    <p>Michael Bir. &#169; <%= year%></p>
+            </footer>
+    </div>
+    <!-- <script src="scripts/app.js"></script> -->
+</body>
+</html>
